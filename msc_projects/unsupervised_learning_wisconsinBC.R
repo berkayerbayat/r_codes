@@ -248,13 +248,13 @@ km_8 <- kmeans(pca_df, 8, nstart = 25)
 print(km_8)
 
 
-summary(df)
-aggregate(df, by=list(cluster=km_3$cluster), mean)
-aggregate(df, by=list(cluster=km_4$cluster), mean)
-aggregate(df, by=list(cluster=km_5$cluster), mean)
-aggregate(df, by=list(cluster=km_6$cluster), mean)
-aggregate(df, by=list(cluster=km_7$cluster), mean)
-aggregate(df, by=list(cluster=km_8$cluster), mean)
+summary(num_data)
+aggregate(num_data, by=list(cluster=km_3$cluster), mean)
+aggregate(num_data, by=list(cluster=km_4$cluster), mean)
+aggregate(num_data, by=list(cluster=km_5$cluster), mean)
+aggregate(num_data, by=list(cluster=km_6$cluster), mean)
+aggregate(num_data, by=list(cluster=km_7$cluster), mean)
+aggregate(num_data, by=list(cluster=km_8$cluster), mean)
 
 fviz_cluster(km_3, data = num_data,
              ellipse.type = "convex",
